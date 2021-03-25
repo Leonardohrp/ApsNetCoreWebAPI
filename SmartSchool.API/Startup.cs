@@ -27,7 +27,7 @@ namespace SmartSchool.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<DataContext>(
-                context => context.UseSqlite(Configuration.GetConnectionString("Default"))
+                context => context.UseMySql(Configuration.GetConnectionString("MySqlConnection"))
             );
 
             services.AddControllers()
@@ -66,7 +66,7 @@ namespace SmartSchool.API
                             Title = "SmartSchool API",
                             Version = description.ApiVersion.ToString(),
                             TermsOfService = new Uri("http://SeusTermosDeUso.com"),
-                            Description = "A descrição da WebAPI da SmartSchool",
+                            Description = "A descriï¿½ï¿½o da WebAPI da SmartSchool",
                             License = new Microsoft.OpenApi.Models.OpenApiLicense
                             {
                                 Name = "SmartSchool License",
